@@ -1,0 +1,4 @@
+#!/bin/bash
+bash build_fat
+cd build
+xcrun -sdk iphoneos clang -framework CoreData -framework QuartzCore -framework UIKit -framework CoreGraphics -framework Foundation -arch armv7 -arch arm64 -fpic -shared -Wl,-force_load libiOSHierarchyViewer_fat.a -o libiOSHierarchyViewer_fat.dylib
